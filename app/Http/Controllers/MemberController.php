@@ -75,9 +75,9 @@ class MemberController extends Controller
         $validator = Validator::make($request->all(),
             [
                 'member_name' => ['required', 'min:2', 'max:30'],
-                'member_surname' => ['required', 'min:2', 'max:30'],
+                'member_surname' => ['required',  'min:2', 'max:30'],
                 'member_live' => ['required', 'min:2', 'max:30'],
-                'member_experience' => ['required',  'min:0.00', 'max:99.99'],
+                'member_experience' => ['required', 'numeric', 'min:0.00', 'max:99.99'],
                 'member_registered' => ['required',  'min:0', 'max:99'],
                 
             ],
